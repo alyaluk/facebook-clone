@@ -1,0 +1,12 @@
+<table style="width:70%">
+<td>
+	<h1><%="Welcome, #{@current_user.display_first_with_link}!" if logged_in?%></h1>
+	<%=@user.add_status(@current_user.id) if logged_in?%>
+	<%=Status.all_statuses(@current_user.id)%><br>
+	<%=log_out%>
+</td>
+<td>
+	<h2>People you might know</h2>
+	<%=User.all_users(@current_user.full_name)%>
+</td>
+</table>

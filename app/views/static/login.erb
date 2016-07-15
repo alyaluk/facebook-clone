@@ -1,0 +1,23 @@
+<table style="width:70%">
+	<td>
+	<h2>Log in to existing account</h2>
+	<form method=post action=/login>
+		<input type=text placeholder="Email" name="user[email]"><br>
+		<input type=password placeholder="Password" name="user[password]"><br>
+		<%=flash[:login_error] if flash[:login_error]%><br>
+		<input type=submit value="Log in">
+	</form><br>
+	<a href='/'>Go back to home page</a>
+	</td>
+	<td>
+	<h2>Or create an account</h2>
+	<form method=post action=/users>
+	<input type=text placeholder="Full name" name="user[full_name]"><br>
+	<input type=text placeholder="Email" name="user[email]"><br>
+	<input type=password placeholder="Password" name="user[password]"><br>
+	<%=flash[:create_error] if flash[:create_error]%><br>
+	<input type=submit valie="Create account">
+	</form><br>
+	<a href='/'>Go back to home page</a>
+	</td>
+</table>

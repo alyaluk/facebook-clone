@@ -1,0 +1,6 @@
+<h2>Update your status</h2>
+<%=@status.display%>
+<form method=post action=<%="/users/#{@current_user.id}/status/#{@status.id}/update"%>>
+	<input type=text placeholder='Update your status.' name='status[updated_status]'><br>
+	<input type=submit value='Submit'>
+</form>
